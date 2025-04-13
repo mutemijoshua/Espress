@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#E9F5ED"
     android:backgroundTint="#E9F5ED"
-    tools:context=".Espress_Home_activity">
+    tools:context=".EspressHomeActivity">
 
     <ImageView
         android:id="@+id/imageView"
