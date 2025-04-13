@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1078325294440",
+    "project_id": "kotdevespress",
+    "storage_bucket": "kotdevespress.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078325294440:android:4a1575e347b785d425d2dd",
+        "android_client_info": {
+          "package_name": "com.kotdev.espress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw-Cy9XZubuJ0JZ8ryWSQPu7pe6rxaHXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
