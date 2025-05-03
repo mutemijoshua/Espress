@@ -3,5 +3,13 @@
     <style name="Base.Theme.Espress" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/Green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--Secondary brand color-->
+        <item name="colorSecondary">@color/Green</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color-->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:toolbarStyle">?attr/colorPrimaryVariant</item>
     </style>
 </resources>

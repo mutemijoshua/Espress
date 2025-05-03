@@ -8,18 +8,25 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var Email: EditText
-    private lateinit var password: EditText
+    private lateinit var Email: TextInputEditText
+    private lateinit var password: TextInputEditText
     private lateinit var loginButton:Button
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+        val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController?.hide(WindowInsetsCompat.Type.statusBars())
+        windowInsetsController?.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
         Email = findViewById(R.id.email)
         password =findViewById(R.id.password)
@@ -33,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
         loginButton.setOnClickListener{
-            val email = Email.toString()
-            val pass = password.toString()
+            val email = Email.text.toString()
+            val pass = password.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty()){
                 firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener {

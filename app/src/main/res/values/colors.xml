@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightGreen">#E9F5ED</color>
     <color name="Green">#2DA239</color>
+    <color name="seat_booked">#BDBDBD</color> <!-- Grey -->
+    <color name="seat_available">#FFFFFF</color> <!-- White -->
+    <color name="seat_selected">#4CAF50</color> <!-- Green -->
 </resources>
