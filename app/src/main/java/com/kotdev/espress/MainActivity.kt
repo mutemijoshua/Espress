@@ -31,8 +31,6 @@ class MainActivity : AppCompatActivity() {
         }
         btnSignUp =findViewById(R.id.btn_Signup)
         btnLogin = findViewById(R.id.btn_Login)
-
-
         btnLogin.setOnClickListener{
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -41,8 +39,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
-
-
     }
     override fun onStart() {
         super.onStart()
@@ -51,4 +47,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

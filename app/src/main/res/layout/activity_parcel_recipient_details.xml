@@ -5,10 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    android:backgroundTint="#E9F5ED"
-    tools:context=".BookTrip">
-
+    tools:context=".ParcelRecipientDetails">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +24,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="Book Trip" />
+                app:title="Parcel Services" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -40,90 +37,96 @@
                 app:cardMaxElevation="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar1"
                 tools:layout_editor_absoluteX="30dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:orientation="vertical"
                     android:padding="24dp">
-                    <!-- Current Location -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recipient Details"
+                        android:id="@+id/signupText"
+                        android:textSize="36sp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/black"/>
                     <TextView
                         android:id="@+id/textCurrentLocation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="From"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Full Name"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
-                    <Spinner
-                        android:id="@+id/fromSpinner"
-                        style="@android:style/Widget.Spinner.DropDown"
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginBottom="16dp"
-                        android:spinnerMode="dropdown" />
-
-                    <!-- Destination Location -->
+                        android:id="@+id/et_recipientName"
+                        android:autofillHints="recipient name"
+                        android:background="@drawable/custom_edit_text"
+                        android:drawablePadding="8dp"
+                        android:hint="Enter repient's name"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:inputType="text"/>
                     <TextView
                         android:id="@+id/totv"
-                        android:layout_width="43dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="To"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <Spinner
-                        android:id="@+id/toSpinner"
-                        style="@android:style/Widget.Spinner.DropDown"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginBottom="16dp"
-                        android:spinnerMode="dropdown" />
-
-                    <!-- Time for Travel -->
-                    <TextView
-                        android:id="@+id/textTimeForTravel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Time for Travel"
+                        android:layout_marginBottom="5dp"
+                        android:text="Phone Number"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
-                    <Spinner
-                        android:id="@+id/timeSpinner"
-                        style="@android:style/Widget.Spinner.DropDown"
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginBottom="16dp"
-                        android:spinnerMode="dropdown" />
-
-                    <!-- Date for Travel -->
+                        android:id="@+id/et_recipientPhoneNo"
+                        android:autofillHints="Value in KSH"
+                        android:background="@drawable/custom_edit_text"
+                        android:drawablePadding="8dp"
+                        android:hint="Enter repient's phone number"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:inputType="text"/>
                     <TextView
-                        android:id="@+id/textDateForTravel"
+                        android:id="@+id/tv_parcelCategory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="Date for Travel"
+                        android:layout_marginBottom="5dp"
+                        android:text="ID number"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
-                    <DatePicker
-                        android:id="@+id/datePicker"
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp" />
-
+                        android:layout_height="50dp"
+                        android:id="@+id/et_recipientIDno"
+                        android:autofillHints="recipient ID"
+                        android:background="@drawable/custom_edit_text"
+                        android:drawablePadding="8dp"
+                        android:hint="Enter recipient's ID"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:inputType="text"/>
                     <Button
-                        android:id="@+id/btn_bookNow"
-                        android:text="Book now"
+                        android:id="@+id/btn_next"
+                        android:text="Next"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

@@ -58,7 +58,7 @@ class SignupActivity : AppCompatActivity() {
                             val intent = Intent(this ,LoginActivity::class.java)
                             startActivity(intent)
                             val user = firebaseAuth.currentUser
-                            val uid = user?.uid.toString()
+                            val uid = firebaseAuth.currentUser?.uid.toString()
 
                             if (user != null) {
                                 val userData = hashMapOf(

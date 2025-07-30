@@ -11,8 +11,9 @@
         <!-- Status bar color-->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:toolbarStyle">?attr/colorPrimaryVariant</item>
-        <item name="android:timePickerDialogTheme">?attr/colorOnBackground</item>
-        <item name="android:datePickerDialogTheme">?attr/colorOnBackground</item>
+        <item name="android:timePickerDialogTheme">?attr/colorOnSecondary</item>
+        <item name="android:datePickerDialogTheme">?attr/colorOnSecondary</item>
+        <item name="android:spinnerStyle">?attr/colorOnSecondary</item>
     </style>
 
     <style name="Theme.Espress" parent="Base.Theme.Espress" />

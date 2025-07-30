@@ -5,10 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    android:backgroundTint="#E9F5ED"
-    tools:context=".BookTrip">
-
+    tools:context=".ParcelDetailsActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +24,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="Book Trip" />
+                app:title="Parcel services" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -74,56 +71,64 @@
                         android:layout_marginBottom="8dp"
                         android:text="To"
                         android:textColor="@color/black"
+
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <!-- Time for Travel -->
                     <Spinner
                         android:id="@+id/toSpinner"
                         style="@android:style/Widget.Spinner.DropDown"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginBottom="16dp"
+                        android:popupTheme="@style/Base.Theme.Espress"
                         android:spinnerMode="dropdown" />
 
-                    <!-- Time for Travel -->
                     <TextView
-                        android:id="@+id/textTimeForTravel"
+                        android:id="@+id/tv_parcelCategory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Time for Travel"
+                        android:text="Category"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <Spinner
-                        android:id="@+id/timeSpinner"
+                        android:id="@+id/categorySpinner"
                         style="@android:style/Widget.Spinner.DropDown"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginBottom="16dp"
                         android:spinnerMode="dropdown" />
 
-                    <!-- Date for Travel -->
                     <TextView
                         android:id="@+id/textDateForTravel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:text="Date for Travel"
+                        android:text="Aproximate Value"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
-                    <DatePicker
-                        android:id="@+id/datePicker"
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp" />
+                        android:layout_height="50dp"
+                        android:id="@+id/aprroxValue"
+                        android:autofillHints="Value in KSH"
+                        android:background="@drawable/custom_edit_text"
+                        android:drawablePadding="8dp"
+                        android:hint="Apriximate value in KSH"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:layout_marginTop="40dp"
+                        android:inputType="text"/>
 
                     <Button
-                        android:id="@+id/btn_bookNow"
-                        android:text="Book now"
+                        android:id="@+id/btn_Next"
+                        android:text="Next"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

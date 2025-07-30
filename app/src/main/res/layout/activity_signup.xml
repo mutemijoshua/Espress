@@ -16,7 +16,6 @@
         app:cardMaxElevation="20dp"
         android:backgroundTint="@color/white"
         android:background="@drawable/custom_edit_text">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,13 +95,12 @@
                 android:background="@drawable/custom_edit_text"
                 android:drawableStart="@drawable/password"
                 android:drawablePadding="8dp"
-                android:hint="confirm your password"
+                android:hint="Confirm your password"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
                 android:layout_marginTop="40dp"
                 android:inputType="textPassword"/>
-
             <Button
                 android:id="@+id/signupButton"
                 android:layout_width="200dp"
